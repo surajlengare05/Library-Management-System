@@ -3,7 +3,7 @@ package com.example.Student_Library_Management_System.Model;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.annotation.processing.Generated;
+
 import javax.persistence.*;
 
 @Entity
