@@ -1,5 +1,6 @@
 package com.example.Student_Library_Management_System.Model;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -10,6 +11,7 @@ import java.util.List;
 @Entity
 @Data
 @NoArgsConstructor
+@AllArgsConstructor
 @Table(name = "author")
 public class Author
 {
@@ -27,4 +29,15 @@ public class Author
     private List<Book> booksWritten = new ArrayList<>(); //can be initialized inside constructor also
     // this will not be added in Parent-table(Author). but will be present in database for our refference
 
+
+
+
+    // used in  Unit Testing
+    public Author(int id, String name, int age, String country, double rating) {
+        this.id = id;
+        this.name = name;
+        this.age = age;
+        this.country = country;
+        this.rating = rating;
+    }
 }

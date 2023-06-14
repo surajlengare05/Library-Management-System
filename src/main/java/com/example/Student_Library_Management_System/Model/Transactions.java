@@ -1,6 +1,7 @@
 package com.example.Student_Library_Management_System.Model;
 
 import com.example.Student_Library_Management_System.Enum.TransactionStatus;
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.hibernate.annotations.CreationTimestamp;
@@ -13,6 +14,7 @@ import java.util.UUID;
 @Entity
 @Data
 @NoArgsConstructor
+@AllArgsConstructor
 @Table(name="transaction")
 public class Transactions
 {
@@ -41,4 +43,14 @@ public class Transactions
     private Card card;
 
 
+
+
+    public Transactions(int id, TransactionStatus transactionStatus, String transactionId, int fine, boolean isIssueOperation, LocalDate transactionDate) {
+        this.id = id;
+        this.transactionStatus = transactionStatus;
+        this.transactionId = transactionId;
+        this.fine = fine;
+        this.isIssueOperation = isIssueOperation;
+        this.transactionDate = transactionDate;
+    }
 }

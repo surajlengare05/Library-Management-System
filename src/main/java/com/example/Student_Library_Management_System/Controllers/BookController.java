@@ -25,7 +25,7 @@ public class BookController
     }
 
     @GetMapping("/getAllBooksOfAuthor")
-    public List<BookResponseForAuthorDto> getAllBooksOfAuthor(String authorName)
+    public List<BookResponseForAuthorDto> getAllBooksOfAuthor(@RequestParam("authorName") String authorName)
     {
         return bookService.getAllBooksOfAuthor(authorName);
     }

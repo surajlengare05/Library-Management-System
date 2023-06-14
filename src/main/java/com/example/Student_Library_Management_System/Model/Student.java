@@ -1,5 +1,6 @@
 package com.example.Student_Library_Management_System.Model;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -9,6 +10,7 @@ import javax.persistence.*;
 @Entity
 @Data
 @NoArgsConstructor
+@AllArgsConstructor
 @Table(name="student")
 public class Student
 {
@@ -30,4 +32,15 @@ public class Student
     @OneToOne(mappedBy = "student", cascade = CascadeType.ALL)
     private Card card;
 
+
+
+
+    public Student(int id, String name, String email, String mobNo, int age, String country) {
+        this.id = id;
+        this.name = name;
+        this.email = email;
+        this.mobNo = mobNo;
+        this.age = age;
+        this.country = country;
+    }
 }

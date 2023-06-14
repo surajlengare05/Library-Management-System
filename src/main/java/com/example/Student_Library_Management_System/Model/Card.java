@@ -1,6 +1,7 @@
 package com.example.Student_Library_Management_System.Model;
 
 import com.example.Student_Library_Management_System.Enum.CardStatus;
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.hibernate.annotations.CreationTimestamp;
@@ -14,6 +15,7 @@ import java.util.List;
 @Entity
 @Data
 @NoArgsConstructor
+@AllArgsConstructor
 @Table(name="card")
 public class Card
 {
@@ -47,5 +49,14 @@ public class Card
     @OneToMany(mappedBy = "card", cascade = CascadeType.ALL)
     private List<Transactions> transactionList = new ArrayList<>();
 
+
+
+
+    public Card(int id, CardStatus cardStatus, Date createdOn, Date updatedOn) {
+        this.id = id;
+        this.cardStatus = cardStatus;
+        this.createdOn = createdOn;
+        this.updatedOn = updatedOn;
+    }
 }
 

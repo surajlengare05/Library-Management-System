@@ -1,5 +1,6 @@
 package com.example.Student_Library_Management_System.ResponseDTOs;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -7,6 +8,7 @@ import javax.persistence.Column;
 
 @Data
 @NoArgsConstructor
+@AllArgsConstructor
 public class StudentResponseDto
 {
     private int id;

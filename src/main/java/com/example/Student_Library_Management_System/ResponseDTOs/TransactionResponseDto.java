@@ -1,6 +1,7 @@
 package com.example.Student_Library_Management_System.ResponseDTOs;
 
 import com.example.Student_Library_Management_System.Enum.TransactionStatus;
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -9,6 +10,7 @@ import java.util.Date;
 
 @Data
 @NoArgsConstructor
+@AllArgsConstructor
 public class TransactionResponseDto
 {
     private int id;

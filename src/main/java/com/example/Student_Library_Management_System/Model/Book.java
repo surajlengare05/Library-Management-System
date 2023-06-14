@@ -1,6 +1,7 @@
 package com.example.Student_Library_Management_System.Model;
 
 import com.example.Student_Library_Management_System.Enum.Genre;
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -11,6 +12,7 @@ import java.util.List;
 @Entity
 @Data
 @NoArgsConstructor
+@AllArgsConstructor
 @Table(name = "book")
 public class Book
 {
@@ -42,6 +44,18 @@ public class Book
     @OneToMany(mappedBy = "book", cascade = CascadeType.ALL)
     private List<Transactions> listOfTransactions = new ArrayList<>();
     // since oneToMany mapping, hence List is required to store many childs
+
+
+
+
+    public Book(int id, String name, int pages, Genre genre, boolean isIssued) {
+        this.id = id;
+        this.name = name;
+        this.pages = pages;
+        this.genre = genre;
+        this.isIssued = isIssued;
+    }
+
 
 }
 
