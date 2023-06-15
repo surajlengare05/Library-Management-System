@@ -8,10 +8,12 @@ import com.example.Student_Library_Management_System.Model.Card;
 import com.example.Student_Library_Management_System.Model.Student;
 import com.example.Student_Library_Management_System.Repositories.StudentRepository;
 import com.example.Student_Library_Management_System.ResponseDTOs.StudentResponseDto;
+import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
+@AllArgsConstructor
 public class StudentService
 {
     @Autowired

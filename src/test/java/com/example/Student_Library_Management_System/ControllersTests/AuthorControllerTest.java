@@ -36,10 +36,7 @@ class AuthorControllerTest
     @MockBean
     AuthorService authorService;
 
-   /* Author author1;
-    Author author2;
-    List<Author> authorList = new ArrayList<>(); */
-
+    // Objects of corresponding ResponseDto's will be created in that specific test itself.
 
     @BeforeEach
     void setUp() {

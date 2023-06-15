@@ -11,6 +11,7 @@ import com.example.Student_Library_Management_System.Repositories.TransactionRep
 import com.example.Student_Library_Management_System.RequestDTOs.ChangeCardStatusRequestDto;
 import com.example.Student_Library_Management_System.ResponseDTOs.BookResponseForCardDto;
 import com.example.Student_Library_Management_System.ResponseDTOs.CardResponseDto;
+import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -19,6 +20,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Service
+@AllArgsConstructor
 public class CardService
 {
     @Autowired

@@ -5,6 +5,7 @@ import com.example.Student_Library_Management_System.Model.Author;
 import com.example.Student_Library_Management_System.Model.Book;
 import com.example.Student_Library_Management_System.Repositories.AuthorRepository;
 import com.example.Student_Library_Management_System.ResponseDTOs.AuthorResponseDto;
+import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -12,6 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Service
+@AllArgsConstructor
 public class AuthorService
 {
     @Autowired

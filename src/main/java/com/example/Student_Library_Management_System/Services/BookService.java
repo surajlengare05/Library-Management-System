@@ -9,6 +9,7 @@ import com.example.Student_Library_Management_System.Repositories.AuthorReposito
 import com.example.Student_Library_Management_System.Repositories.BookRepository;
 import com.example.Student_Library_Management_System.Repositories.TransactionRepository;
 import com.example.Student_Library_Management_System.ResponseDTOs.*;
+import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -16,6 +17,7 @@ import java.time.LocalDate;
 import java.util.*;
 
 @Service
+@AllArgsConstructor
 public class BookService
 {
     @Autowired

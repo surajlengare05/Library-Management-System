@@ -13,6 +13,7 @@ import com.example.Student_Library_Management_System.RequestDTOs.ReturnBookReque
 import com.example.Student_Library_Management_System.ResponseDTOs.TransactionResponseDto;
 import com.example.Student_Library_Management_System.ResponseDTOs.TransactionResponseForBookDto;
 import com.example.Student_Library_Management_System.ResponseDTOs.TransactionResponseForCardDto;
+import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -28,6 +29,7 @@ import java.util.List;
 import java.util.UUID;
 
 @Service
+@AllArgsConstructor
 public class TransactionService
 {
     @Autowired
