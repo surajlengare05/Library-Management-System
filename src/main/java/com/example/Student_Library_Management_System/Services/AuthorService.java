@@ -50,7 +50,7 @@ public class AuthorService
         authorResponseDto.setAge(author.getAge());
         authorResponseDto.setRating(author.getRating());
         authorResponseDto.setCountry(author.getCountry());
-                         // convert List<Book> --> List<BookResponseDto>
+                         // convert List<Book> --> List<String> which stores only name of book
         List<Book> bookList = author.getBooksWritten();
         List<String> namesOfBooksWritten = new ArrayList<>();
 

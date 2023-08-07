@@ -184,6 +184,8 @@ public class TransactionService
         book.getListOfTransactions().add(transaction);  // adding current transaction to arraylist in Book(parent)
         card.getTransactionList().add(transaction);    // adding current transaction to arraylist in Card(parent)
 
+        transactionRepository.save(transaction);  // saving child before saving parent (since without this step,
+                                                  // return transaction was getting saved twice.
         // save the parent.
         cardRepository.save(card);
         // card is a parent of book & transactions both

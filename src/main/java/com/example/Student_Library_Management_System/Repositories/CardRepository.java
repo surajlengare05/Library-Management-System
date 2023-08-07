@@ -17,4 +17,5 @@ public interface CardRepository extends JpaRepository<Card, Integer>
 
     @Query(value = "select * from card where card_status=:status", nativeQuery = true)
     List<Card> findCardsWithGivenStatus(String status);
+    // used in getCardsWithGivenStatus methode (Card Service)
 }

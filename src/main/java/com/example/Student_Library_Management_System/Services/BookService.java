@@ -49,7 +49,7 @@ public class BookService
         author.setBooksWritten(currentWrittenBooks);
 
         // since we have use Bidirectional mapping hence, we can only save parent entity(Author) & child(book)
-        // will get saved in Db automatically
+        // will get saved in its table in Db automatically
         authorRepository.save(author);        // Resaving/upating author entity. changes-> new book is added in List of booksWritten
         return ("Book added successfully");
     }
